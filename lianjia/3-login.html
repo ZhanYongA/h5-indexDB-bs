@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>3-login链家</title>
+    <link rel="stylesheet" href="../frameworks/bootstrap-3.3.0-dist/css/bootstrap.css">
+    <script src="../frameworks/jquery-2.1.4/jquery.js"></script>
+    <script src="../frameworks/bootstrap-3.3.0-dist/js/bootstrap.js"></script>
+
+    <!--自定义-->
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/login.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <!--第一部分-->
+        <div class="row">
+            <div class="col-xs-6 login-header nav-tabs">
+                <div class="text-center"><a href="#">普通登陆</a></div>
+                <div></div>
+            </div>
+            <div class="col-xs-6 login-header">
+                <div class="text-center"><a href="#">验证码快捷登陆</a></div>
+                <div style="background-color: #D1D1D1;"></div>
+            </div>
+        </div>
+
+        <!--第二部分-->
+        <div class="login-center">
+            <form action="login.action" id="login-form" class="login-form">
+                <div class="row form-input1">
+                    <input class="col-xs-12" type="tel" name="telphone" placeholder="请输入手机号">
+                </div>
+                <div class="row form-input2">
+                <input class="col-xs-12" type="password" name="password" placeholder="请输入登陆密码">
+                </div>
+
+                <div class="row login-btn">
+                    <input type="submit" value="立即注册" class="form-control">
+                </div>
+
+                <div class="row login-end">
+                    <div class="col-xs-6 text-left">
+                        <a href="#">立即注册</a>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <a href="#">忘记密码</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

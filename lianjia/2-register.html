@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>2-链家注册</title>
+    <link rel="stylesheet" href="../frameworks/bootstrap-3.3.0-dist/css/bootstrap.css">
+    <script src="../frameworks/jquery-2.1.4/jquery.js"></script>
+    <script src="../frameworks/bootstrap-3.3.0-dist/js/bootstrap.js"></script>
+
+    <!--自定义-->
+    <link rel="stylesheet" href="css/index.css">
+
+    <script>
+        $(function () {
+            //   register message
+            //   改变距离可重发验证码的时间（默认为60秒）
+            $('#msgButton').on('click', function () {
+                var $btn = $(this).button('loading');
+                var sec = 61;
+                $('#msgButton').data( '短信发送中...');
+                var timer = setInterval(function(){
+                    $('#msgButton').text(sec-1+"s后可重发");
+                    sec-=1;
+                },1000);
+                setTimeout(function(){
+                    clearInterval(timer);
+                    $btn.button('reset');
+                },61000);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="register-center">
+            <form action="register.action" id="register-form" class="register-form">
+                <div class="row form-input1">
+                    <input class="col-xs-12" type="tel" name="telphone" placeholder="请输入手机号">
+                    <a href="#" id="msgButton">发送验证码</a>
+                </div>
+                <div class="row form-input1">
+                    <input class="col-xs-12" type="text" name="yanzhengma" pattern="\d{1,6}" placeholder="请输入短信验证码">
+                </div>
+                <div class="row form-input2">
+                    <input class="col-xs-12" type="password" name="password" placeholder="请输入登陆密码">
+                </div>
+
+                <div class="row register-btn">
+                    <input type="submit" value="立即注册" class="form-control">
+                </div>
+
+                <div class="row register-end">
+                    <div class="col-xs-8 text-left">
+                        <span href="#">已有链家账号?<a href="#">立即登陆</a></span>
+                    </div>
+                    <div class="col-xs-4 text-right">
+                        <a href="#">忘记密码</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+article,section{display: block}
+.tb1{
+    width: 300px;border: 1px solid #ccc; border-collapse: collapse;
+    margin:20px auto 0 auto;
+}
+.hiddenTr{display: none}
+.tb1 th,td{
+    border: 1px solid #ccc;
+}
+.art_{width: 400px;height: 500px;border: 1px solid #ccc; margin: 0 auto;}
+.art_1{
+    width: 300px;
+    margin:20px auto 0 auto;
+}
+.art_2{
+    width: 300px;
+    margin:10px auto 0 auto;
+
+}
+.tb2{border: 1px solid #ccc; border-collapse: collapse;
+     width: 300px; margin:0 auto;
+    }
+.tb2 td{
+    border: 1px solid #ccc;
+}
+h1{text-align: center}
